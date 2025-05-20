@@ -61,18 +61,20 @@
 /* Home About 2.0 */
 .about_section {
   padding-top: 80px;
-  padding-bottom: 300px;
-  background: url("../assets/about/about-2.png") no-repeat center center;
+  padding-bottom: 500px;
+  /* background: url("../assets/about/about-2.png") no-repeat center center; */
+  background: url("https://media.istockphoto.com/id/2086749899/photo/pizza-on-wooden-table.jpg?b=1&s=612x612&w=0&k=20&c=AGK5d2EvGCAqyltJZPhbNkM4JH-RWfedNmG4Qh4fcW0=") no-repeat center center;
   background-size: cover;
   width: 100%;
 }
 
 .about_section h2 {
   font-size: 3.5rem;
+  color: #ff0000;
 }
 
 .about_section p {
-  color: var(--grey);
+  color: #ff0000;
   padding: 20px 30px;
   font-size: 19px;
 }

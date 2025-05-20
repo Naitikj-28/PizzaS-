@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 function Cards({ image, rating, title, paragraph, price, renderRatingIcons }) {
   return (
@@ -13,7 +12,7 @@ function Cards({ image, rating, title, paragraph, price, renderRatingIcons }) {
           <div className="d-flex align-items-center justify-content-between">
             <div className="item_rating">{renderRatingIcons(rating)}</div>
             <div className="wishlist">
-              <i class="bi bi-heart"></i>
+              <i className="bi bi-heart"></i>
             </div>
           </div>
 
@@ -23,12 +22,6 @@ function Cards({ image, rating, title, paragraph, price, renderRatingIcons }) {
           <div className="d-flex align-items-center justify-content-between">
             <div className="menu_price">
               <h5 className="mb-0">${price}</h5>
-            </div>
-            <div className="add_to_card">
-              <Link to="/">
-                <i class="bi bi-bag me-2"></i>
-                Add To Cart
-              </Link>
             </div>
           </div>
         </Card.Body>

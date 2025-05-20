@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import Logo from "../../assets/logo/logo.png";
 import Logo from "../../assets/logo/logo2.png";
 import "../../styles/HeaderStyle.css";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
 
-  // Scroll Navbar
   const changeValueOnScroll = () => {
     const scrollValue = document?.documentElement?.scrollTop;
     scrollValue > 100 ? setNav(true) : setNav(false);
@@ -24,10 +22,8 @@ const Header = () => {
         className={`${nav === true ? "sticky" : ""}`}
       >
         <Container>
-          <Navbar.Brand href="#home">
-            <Link to="/" className="logo">
-              <img src={Logo} alt="Logo" className="img-fluid" />
-            </Link>
+          <Navbar.Brand as={Link} to="/" className="logo">
+            <img src={Logo} alt="Logo" className="img-fluid" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -35,14 +31,11 @@ const Header = () => {
               <Nav.Link as={Link} to="/">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="/About">
                 About
               </Nav.Link>
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} to="/menu">
                 Our Menu
-              </Nav.Link>
-              <Nav.Link as={Link} to="/">
-                Shop
               </Nav.Link>
               <Nav.Link as={Link} to="/">
                 Blog
@@ -52,8 +45,8 @@ const Header = () => {
               </Nav.Link>
               <Nav.Link as={Link} to="/">
                 <div className="cart">
-                  <i class="bi bi-bag fs-5"></i>
-                  <em className="roundpoint">2</em>
+                  <i className="bi bi-bag fs-5"></i>
+                  <em className="roundpoint">0</em>
                 </div>
               </Nav.Link>
             </Nav>
